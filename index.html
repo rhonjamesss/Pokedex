@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="container header-section">
+        <img src="assets/International_Pokémon_logo.svg.png" alt="Pokémon Logo" class="pokemon-logo mb-3">
+        <p class="text-muted">Your Ultimate Pokémon Encyclopedia</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search Pokémon by name or number...">
+        </div>
+
+        <!-- Generation Filters -->
+        <div class="generation-filter">
+            <button class="gen-btn active" data-gen="all">All Gens</button>
+            <button class="gen-btn" data-gen="1">Gen I</button>
+            <!-- Add other generation buttons -->
+        </div>
+
+        <!-- Pokemon Grid -->
+        <div id="pokemonList" class="row g-4">
+            <!-- Pokemon cards will be inserted here -->
+            <div class="loading-spinner" id="initialLoadingSpinner">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center">
+            <button id="loadMoreBtn" class="btn">
+                <i class="fas fa-plus-circle me-2"></i>Load More Pokémon
+            </button>
+        </div>
+    </div>
+
+    <!-- Pokemon Modal -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Pokemon details will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="SCRIPT/script.js"></script>
+</body>
+</html>
