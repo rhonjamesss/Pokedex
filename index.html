@@ -19,7 +19,13 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
+            /* Background Image */
+            background-image: url('IMG/pokemon-background.webp'); /* <<< ADDED: Make sure the image path is correct */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Keep the background fixed during scroll */
+            background-color: var(--background-color); /* Fallback color */
             color: var(--primary-color);
             min-height: 100vh;
         }
